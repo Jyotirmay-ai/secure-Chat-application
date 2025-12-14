@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Protocol</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>👻 Ghost Protocol</h1>
+            <div id="connection-status" class="status offline">Offline</div>
+        </header>
+
+        <main>
+            <div class="identity-panel">
+                <p>Hidden Backend Address (Configure Gateway to this):</p>
+                <code id="my-onion-id">Generating...</code>
+            </div>
+
+            <div class="security-panel">
+                <label for="enc-key">🔐 Encryption Key (Shared Secret):</label>
+                <input type="password" id="enc-key" placeholder="Enter a secret password to encrypt chats...">
+            </div>
+
+
+
+            <div id="chat-window">
+                <!-- Messages go here -->
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type a secure message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+
+</html>

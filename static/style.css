@@ -1,0 +1,125 @@
+:root {
+    --neon-green: #0f0;
+    --dark-bg: #0d0d0d;
+    --panel-bg: #1a1a1a;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--neon-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.online {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+}
+
+.identity-panel,
+.connection-panel,
+.security-panel {
+    background-color: var(--panel-bg);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--neon-green);
+}
+
+.security-panel {
+    border-left-color: #f0f;
+}
+
+.security-panel label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f0f;
+    font-weight: bold;
+}
+
+.security-panel input {
+    width: 100%;
+    border-color: #f0f;
+    box-sizing: border-box;
+    /* Fix padding causing overflow */
+}
+
+code {
+    display: block;
+    background: #000;
+    padding: 10px;
+    margin-top: 5px;
+    color: var(--neon-green);
+    word-break: break-all;
+}
+
+#chat-window {
+    flex-grow: 1;
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px;
+    background: var(--panel-bg);
+    border: 1px solid #333;
+    color: #fff;
+    font-family: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    background: var(--neon-green);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+button:hover {
+    box-shadow: 0 0 15px var(--neon-green);
+}
