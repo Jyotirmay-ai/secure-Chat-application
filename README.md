@@ -13,8 +13,6 @@ Ghost Protocol is a hybrid secure messaging application. It combines the anonymi
 
 This project uses a unique **"Gateway" Architecture** to make Tor Hidden Services accessible to normal users (Chrome/Safari) without requiring the Tor Browser.
 
-
-
 1.  **The Vault (Backend):** A Python/Flask server running locally on your machine. It spins up an ephemeral **Tor Hidden Service**.
 2.  **The Bridge (Tunnel):** **Ngrok** tunnels traffic from the public internet securely to your local vault.
 3.  **The Interface (Frontend):** A static HTML/JS site hosted on **Netlify**.
